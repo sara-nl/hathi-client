@@ -26,6 +26,10 @@
 # The java implementation to use.
 export JAVA_HOME=${JAVA_HOME}
 
+# Kerberos configuration
+export KRB5_CONFIG=/etc/krb5.conf
+export HADOOP_OPTS="-Djava.security.krb5.conf=$KRB5_CONFIG -Djava.security.krb5.realm=CUA.SURFSARA.NL -Djava.security.krb5.kdc=master.cua.surfsara.nl $HADOOP_OPTS"
+
 # The jsvc implementation to use. Jsvc is required to run secure datanodes.
 #export JSVC_HOME=${JSVC_HOME}
 

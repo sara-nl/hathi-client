@@ -13,6 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Kerberos configuration
+export KRB5_CONFIG=/etc/krb5.conf
+export YARN_OPTS="-Djava.security.krb5.conf=$KRB5_CONFIG -Djava.security.krb5.realm=CUA.SURFSARA.NL -Djava.security.krb5.kdc=master.cua.surfsara.nl $YARN_OPTS"
+
 # User for YARN daemons
 export HADOOP_YARN_USER=${HADOOP_YARN_USER:-yarn}
 
