@@ -20,7 +20,7 @@
   </property>
     <property>
     <name>fs.defaultFS</name>
-    <value>hdfs://head02.hathi.surfsara.nl:9200</value>
+    <value>hdfs://head02.hathi.surfsara.nl:8020</value>
   </property>
     <property>
     <name>hadoop.rpc.protection</name>
