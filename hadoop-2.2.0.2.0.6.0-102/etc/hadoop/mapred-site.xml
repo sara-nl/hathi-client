@@ -1,13 +1,5 @@
   <configuration>
     <property>
-    <name>mapreduce.cluster.local.dir</name>
-    <value>/hadoop/mapred</value>
-  </property>
-    <property>
-    <name>mapreduce.jobhistory.address</name>
-    <value>head05.hathi.surfsara.nl:10020</value>
-  </property>
-    <property>
     <name>yarn.app.mapreduce.am.staging-dir</name>
     <value>/user</value>
   </property>

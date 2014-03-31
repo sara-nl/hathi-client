@@ -4,26 +4,11 @@
     <value>kerberos</value>
   </property>
     <property>
-    <name>hadoop.security.auth_to_local</name>
-    <value>
-        RULE:[2:$1@$0]([rn]m@.*)s/.*/yarn/
-        RULE:[2:$1@$0](jhs@.*)s/.*/mapred/
-        RULE:[2:$1@$0]([nd]n@.*)s/.*/hdfs/
-        RULE:[2:$1@$0](hm@.*)s/.*/hbase/
-        RULE:[2:$1@$0](rs@.*)s/.*/hbase/
-        DEFAULT
-    </value>
-  </property>
-    <property>
     <name>hadoop.security.authorization</name>
     <value>true</value>
   </property>
     <property>
     <name>fs.defaultFS</name>
     <value>hdfs://head02.hathi.surfsara.nl:8020</value>
-  </property>
-    <property>
-    <name>hadoop.rpc.protection</name>
-    <value>authentication</value>
   </property>
 </configuration>
