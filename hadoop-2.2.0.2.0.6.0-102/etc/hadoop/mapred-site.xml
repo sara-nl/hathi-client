@@ -4,6 +4,10 @@
     <value>/user</value>
   </property>
     <property>
+   <name>mapreduce.jobhistory.address</name>
+   <value>head05.hathi.surfsara.nl:10020</value>
+  </property>
+    <property>
     <name>mapreduce.jobhistory.intermediate-done-dir</name>
     <value>/mr-history/tmp</value>
   </property>
