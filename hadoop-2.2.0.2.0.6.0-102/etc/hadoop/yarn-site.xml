@@ -1,19 +1,22 @@
   <configuration>
     <property>
-    <name>yarn.log.server.url</name>
-    <value>http://head05.hathi.surfsara.nl:19888/jobhistory/logs</value>
-    <description>URL for job history server</description>
+    <name>yarn.application.classpath</name>
+    <value>/etc/hadoop/conf,/usr/lib/hadoop/*,/usr/lib/hadoop/lib/*,/usr/lib/hadoop-hdfs/*,/usr/lib/hadoop-hdfs/lib/*,/usr/lib/hadoop-yarn/*,/usr/lib/hadoop-yarn/lib/*,/usr/lib/hadoop-mapreduce/*,/usr/lib/hadoop-mapreduce/lib/*</value>
   </property>
     <property>
     <name>yarn.resourcemanager.address</name>
     <value>head05.hathi.surfsara.nl:8032</value>
   </property>
     <property>
-      <name>yarn.resourcemanager.principal</name>	
-      <value>rm/_HOST@CUA.SURFSARA.NL</value>
+    <name>yarn.resourcemanager.scheduler.address</name>
+    <value>head05.hathi.surfsara.nl:8030</value>
   </property>
     <property>
-      <name>yarn.nodemanager.principal</name>	
-      <value>nm/_HOST@CUA.SURFSARA.NL</value>
-  </property>	
+    <name>yarn.resourcemanager.principal</name>
+    <value>rm/_HOST@CUA.SURFSARA.NL</value>
+  </property>
+    <property>
+    <name>yarn.nodemanager.principal</name>
+    <value>nm/_HOST@CUA.SURFSARA.NL</value>
+    </property>
 </configuration>
