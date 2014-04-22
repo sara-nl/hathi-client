@@ -1,0 +1,7 @@
+export CLIENT_DIR="$PWD"
+
+export HADOOP_HOME="$CLIENT_DIR/hadoop-2.2.0.2.0.6.0-102"
+export HADOOP_CONF="$HADOOP_HOME/etc/hadoop"
+export HADOOP_CONF_DIR="$HADOOP_CONF"
+
+export PATH="$HADOOP_HOME/bin:$PIG_HOME/bin:$PATH"
