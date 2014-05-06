@@ -10,7 +10,7 @@ Prerequisites
 
 This software is tested on Linux and OSX. On Linux you need to make sure that Java 7 and the Kerberos client libraries are installed. On OSX these should already be installed.
 
-Debian-based Linux (Debian, Ubuntu, Mint): `apt-get install openjdk-7-jdk krb5-user`
+Debian-based Linux (Debian, Ubuntu, Mint): `apt-get install openjdk-7-jdk krb5-user`  
 Enterprise Linux (Redhat, CentOS, Fedora): `yum install java-1.7.0-openjdk krb5-workstation`
 
 Usage
@@ -29,8 +29,8 @@ Now you can authenticate using Kerberos:
 
 And use the hadoop and pig utilities:
 
-    hadoop fs -ls /
-    hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar pi 5 5
+    hdfs dfs -ls /
+    yarn jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar pi 5 5
 
 Support
 -------
