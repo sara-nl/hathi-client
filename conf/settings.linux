@@ -1,7 +1,7 @@
 export CLIENT_DIR="$PWD"
 
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
-export KRB5_CONF="$CLIENT_DIR/config/krb5.conf"
+export KRB5_CONFIG="$CLIENT_DIR/conf/krb5.conf"
 
 export HADOOP_HOME="$CLIENT_DIR/hadoop-2.4.0.2.1.1.0-385"
 export HADOOP_CONF="$HADOOP_HOME/etc/hadoop"
