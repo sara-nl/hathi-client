@@ -1,7 +1,11 @@
 export CLIENT_DIR="$PWD"
 
+# Java home for Ubuntu: 
 #export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
+
+# Java home for CentOS:
 export JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.55.x86_64/"
+
 export KRB5_CONFIG="$CLIENT_DIR/conf/krb5.conf"
 
 export HADOOP_HOME="$CLIENT_DIR/hadoop-2.4.0.2.1.1.0-385"
@@ -11,3 +15,7 @@ export HADOOP_CONF_DIR="$HADOOP_CONF"
 export PIG_HOME="$CLIENT_DIR/pig-0.12.1.2.1.1.0-385"
 
 export PATH="$HADOOP_HOME/bin:$PIG_HOME/bin:$PATH"
+
+export HADOOP_CMD="$CLIENT_DIR/hadoop-2.4.0.2.1.1.0-385/bin/hadoop"
+export HADOOP_STREAMING="$CLIENT_DIR/hadoop-2.4.0.2.1.1.0-385/share/hadoop/tools/lib/hadoop-streaming-2.4.0.2.1.1.0-385.jar"
+
