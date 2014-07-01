@@ -27,8 +27,7 @@
 export JAVA_HOME=${JAVA_HOME}
 
 # Kerberos configuration
-#export KRB5_CONFIG=/etc/krb5.conf
-export HADOOP_OPTS="-Djava.security.krb5.conf=$KRB5_CONFIG -Djava.security.krb5.realm=CUA.SURFSARA.NL -Djava.security.krb5.kdc=kdc.hathi.surfsara.nl $HADOOP_OPTS"
+export HADOOP_OPTS="-Djava.security.krb5.conf=$KRB5_CONFIG -Djava.security.krb5.realm=CUA.SURFSARA.NL -Djava.security.krb5.kdc=kdc.hathi.surfsara.nl -Djava.net.preferIPv4Stack=true $HADOOP_OPTS"
 
 # The jsvc implementation to use. Jsvc is required to run secure datanodes.
 #export JSVC_HOME=${JSVC_HOME}
@@ -49,7 +48,7 @@ done
 #export HADOOP_NAMENODE_INIT_HEAPSIZE=""
 
 # Extra Java runtime options.  Empty by default.
-export HADOOP_OPTS="$HADOOP_OPTS -Djava.net.preferIPv4Stack=true"
+#export HADOOP_OPTS="$HADOOP_OPTS"
 
 # Command specific options appended to HADOOP_OPTS when specified
 export HADOOP_NAMENODE_OPTS="-Dhadoop.security.logger=${HADOOP_SECURITY_LOGGER:-INFO,RFAS} -Dhdfs.audit.logger=${HDFS_AUDIT_LOGGER:-INFO,NullAppender} $HADOOP_NAMENODE_OPTS"
