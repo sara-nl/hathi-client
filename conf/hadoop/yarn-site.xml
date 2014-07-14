@@ -23,4 +23,8 @@
     <name>yarn.nodemanager.principal</name>
     <value>nm/_HOST@CUA.SURFSARA.NL</value>
     </property>
+   <property>
+    <name>yarn.nodemanager.remote-app-log-dir</name>
+    <value>/app-logs</value>
+  </property>
 </configuration>
