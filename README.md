@@ -47,4 +47,6 @@ The namenode of the cluster: [http://namenode.hathi.surfsara.nl](http://namenode
 Support
 -------
 
-For more information about the SURFsara Hadoop cluster see <https://www.surfsara.nl/systems/hadoop>. For any questions using Hadoop contact: [hadoop.support@surfsara.nl](mailto:hadoop.support@surfsara.nl?subject=Help with hathi-client).
+For more information about the SURFsara Hadoop cluster see <https://www.surfsara.nl/systems/hadoop>. 
+
+For any questions using Hadoop contact: [hadoop.support@surfsara.nl](mailto:hadoop.support@surfsara.nl?subject=Help with hathi-client).
