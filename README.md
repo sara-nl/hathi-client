@@ -37,10 +37,11 @@ And use the hadoop and pig utilities:
 Browser setup
 -------------
 
-In order to authenticate to the webapps you will need to use Firefox an alter the about:config (promise to be careful). Search for the key network.negotiate-auth.trusted-uris and add the value hathi.surfsara.nl.
+In order to authenticate to the webapps you will need to use Firefox and alter the about:config (promise to be careful). Search for the key network.negotiate-auth.trusted-uris and add the value hathi.surfsara.nl.
 
-The resource manager of the cluster: [head05.hathi.surfsara.nl](head05.hathi.surfsara.nl)
-The namenode of the cluster: [namenode.hathi.surfsara.nl](namenode.hathi.surfsara.nl)
+The resource manager of the cluster: [http://head05.hathi.surfsara.nl](head05.hathi.surfsara.nl)
+
+The namenode of the cluster: [http://namenode.hathi.surfsara.nl](namenode.hathi.surfsara.nl)
 
 
 Support
