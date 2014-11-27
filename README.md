@@ -39,9 +39,17 @@ Browser setup
 
 In order to authenticate to the webapps you will need to use Firefox and alter the about:config (promise to be careful). Search for the key network.negotiate-auth.trusted-uris and add the value hathi.surfsara.nl.
 
-The resource manager of the cluster: [http://head05.hathi.surfsara.nl](http://head05.hathi.surfsara.nl)
+In addition, Firefox needs to be aware of the Kerberos setup. For this the Kerberos configuration `conf/krb5.conf` needs to be placed in the right location (you will need root access for this). Note that if you work with different Kerberos realms you can also add the kdc configuration (the [realms] section) from the hathi-client file to any existing Kerberos configuration file. To copy (and overwrite any existing files) the configuration to the correct location:
 
-The namenode of the cluster: [http://namenode.hathi.surfsara.nl](http://namenode.hathi.surfsara.nl)
+For OSX:
+	sudo cp git/hathi-client/conf/krb5.conf $HOME/Library/Preferences/edu.mit.Kerberos
+	
+For Linux:
+	sudo cp git/hathi-client/conf/krb5.conf /etc/
+
+The resource manager of the cluster can then be found here: [http://head05.hathi.surfsara.nl](http://head05.hathi.surfsara.nl)
+
+The namenode of the cluster is located here: [http://namenode.hathi.surfsara.nl](http://namenode.hathi.surfsara.nl)
 
 
 Support
