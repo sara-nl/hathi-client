@@ -19,4 +19,8 @@
     <name>mapreduce.jobhistory.principal</name>
     <value>jhs/_HOST@CUA.SURFSARA.NL</value>
   </property>
+    <property>
+    <name>yarn.app.mapreduce.am.log.level</name>
+    <value>WARN</value>
+  </property>
 </configuration>
