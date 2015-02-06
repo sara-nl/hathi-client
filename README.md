@@ -21,7 +21,7 @@ Usage
 `cd` to the top level directory and source the settings file for your platform:
 
     cd git/hathi-client && . conf/settings.linux
-    cd -
+    cd - > /dev/null
 
 (You can add these lines to your `~/.profile` so that they are run automatically on login).
 
