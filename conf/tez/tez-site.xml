@@ -1,0 +1,10 @@
+ <configuration>
+  <property>
+    <name>tez.lib.uris</name>
+    <value>/apps/tez/tez-0.5.2.2.2.0.0-2041.tar.gz</value>
+  </property>
+  <property>
+    <name>tez.am.client.am.port-range</name>
+    <value>50100-50115</value>
+  </property>
+</configuration>

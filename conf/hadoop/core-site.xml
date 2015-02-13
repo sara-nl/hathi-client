@@ -9,6 +9,6 @@
   </property>
     <property>
     <name>fs.defaultFS</name>
-    <value>hdfs://head02.hathi.surfsara.nl:8020</value>
+    <value>hdfs://hathi-surfsara</value>
   </property>
 </configuration>
