@@ -11,18 +11,16 @@ export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 
 export KRB5_CONFIG="$CLIENT_DIR/conf/krb5.conf"
 
-export HADOOP_HOME="$CLIENT_DIR/hadoop-2.4.0.2.1.1.0-385"
+export HADOOP_HOME="$CLIENT_DIR/hadoop-2.6.0"
 export HADOOP_CONF="$HADOOP_HOME/etc/hadoop"
 export HADOOP_CONF_DIR="$HADOOP_CONF"
 
-export PIG_HOME="$CLIENT_DIR/pig-0.12.1.2.1.1.0-385"
+export TEZ_CONF_DIR="$CLIENT_DIR/conf/tez"
+export HADOOP_CLASSPATH="$TEZ_CONF_DIR:$HADOOP_CLASSPATH"
 
-export LINGUAL_HOME="$CLIENT_DIR/lingual-client-1.1.1"
-export LINGUAL_PLATFORM=hadoop2-mr1
-export LINGUAL_JVM_OPTS="-Djava.security.krb5.conf=$KRB5_CONFIG -Djava.security.krb5.realm=CUA.SURFSARA.NL -Djava.security.krb5.kdc=kdc.hathi.surfsara.nl $LINGUAL_JVM_OPTS"
+export PIG_HOME="$CLIENT_DIR/pig-0.14.0"
 
-export PATH="$HADOOP_HOME/bin:$PIG_HOME/bin:$LINGUAL_HOME/bin:$PATH"
+export PATH="$HADOOP_HOME/bin:$PIG_HOME/bin:$PATH"
 
-export HADOOP_CMD="$CLIENT_DIR/hadoop-2.4.0.2.1.1.0-385/bin/hadoop"
-export HADOOP_STREAMING="$CLIENT_DIR/hadoop-2.4.0.2.1.1.0-385/share/hadoop/tools/lib/hadoop-streaming-2.4.0.2.1.1.0-385.jar"
-
+export HADOOP_CMD="$CLIENT_DIR/hadoop-2.6.0/bin/hadoop"
+export HADOOP_STREAMING="$CLIENT_DIR/hadoop-2.6.0/share/hadoop/tools/lib/hadoop-streaming-2.6.0.jar"
