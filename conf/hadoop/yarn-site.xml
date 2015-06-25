@@ -14,16 +14,24 @@
     </value>
   </property>
     <property>
-    <name>yarn.resourcemanager.webapp.address</name>
-    <value>head05.hathi.surfsara.nl:8088</value>
+    <name>yarn.resourcemanager.ha.enabled</name>
+    <value>true</value>
   </property>
     <property>
-    <name>yarn.resourcemanager.address</name>
-    <value>head05.hathi.surfsara.nl:8032</value>
+    <name>yarn.resourcemanager.cluster-id</name>
+    <value>hathi</value>
   </property>
     <property>
-    <name>yarn.resourcemanager.scheduler.address</name>
-    <value>head05.hathi.surfsara.nl:8030</value>
+    <name>yarn.resourcemanager.ha.rm-ids</name>
+    <value>rm1,rm2</value>
+  </property>
+    <property>
+    <name>yarn.resourcemanager.hostname.rm1</name>
+    <value>head05.hathi.surfsara.nl</value>
+  </property>
+    <property>
+    <name>yarn.resourcemanager.hostname.rm2</name>
+    <value>head03.hathi.surfsara.nl</value>
   </property>
     <property>
     <name>yarn.resourcemanager.principal</name>

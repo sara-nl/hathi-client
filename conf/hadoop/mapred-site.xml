@@ -23,4 +23,20 @@
     <name>yarn.app.mapreduce.am.log.level</name>
     <value>WARN</value>
   </property>
+    <property>
+    <name>yarn.app.mapreduce.am.command-opts</name>
+    <value>-Xmx12g</value>
+  </property>
+    <property>
+    <name>yarn.app.mapreduce.am.resource.mb</name>
+    <value>14336</value>
+  </property>
+    <property>
+    <name>mapreduce.map.memory.mb</name>
+    <value>7168</value>
+  </property>
+    <property>
+    <name>mapreduce.reduce.memory.mb</name>
+    <value>14336</value>
+  </property>
 </configuration>
