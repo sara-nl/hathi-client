@@ -41,6 +41,10 @@
     <name>yarn.nodemanager.principal</name>
     <value>nm/_HOST@CUA.SURFSARA.NL</value>
     </property>
+    <property>
+    <name>yarn.resourcemanager.webapp.address</name>
+    <value>head05.hathi.surfsara.nl:8088</value>
+  </property>
    <property>
     <name>yarn.nodemanager.remote-app-log-dir</name>
     <value>/app-logs</value>
