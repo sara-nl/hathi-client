@@ -20,7 +20,7 @@ krb5-workstation`
 Note that when using the Oracle JDK (e.g. OSX) you will need to install the
 Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files
 for your specific JVM version. For Oracle Java 7 they can be found here:
-[http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)
+<http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html>
 
 Usage
 -----
@@ -59,25 +59,20 @@ correct location:
 
 For OSX:
 
-    sudo cp git/hathi-client/conf/krb5.conf $HOME/Library/Preferences/edu.mit.Kerberos
+    cp git/hathi-client/conf/krb5.conf $HOME/Library/Preferences/edu.mit.Kerberos
 	
 For Linux:
 
     sudo cp git/hathi-client/conf/krb5.conf /etc/
 
-The resource manager of the cluster can then be found here:
-[http://head05.hathi.surfsara.nl](http://head05.hathi.surfsara.nl)
+The resource manager of the cluster can then be found at <http://head05.hathi.surfsara.nl>.
 
-The namenode of the cluster is located here:
-[http://namenode.hathi.surfsara.nl](http://namenode.hathi.surfsara.nl)
-
+The namenode of the cluster is located at <http://head02.hathi.surfsara.nl>.
 
 Support
 -------
 
-For more information about the SURFsara Hadoop cluster see
-<https://www.surfsara.nl/systems/hadoop>.
+For more information about the SURFsara Hadoop cluster see <https://userinfo.surfsara.nl/systems/hadoop>.
 
 For any questions using Hadoop on the SURFsara cluster contact:
-[helpdesk@surfsara.nl](mailto:helpdesk@surfsara.nl?subject=Help with Hadoop
- hathi-client).
+[helpdesk@surfsara.nl](mailto:helpdesk@surfsara.nl?subject=Help with Hadoop hathi-client).
