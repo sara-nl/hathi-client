@@ -4,7 +4,10 @@ export CLIENT_DIR="$PWD"
 #export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
 
 # Java home for CentOS:
-export JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.55.x86_64/"
+#export JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.55.x86_64/"
+
+# "universal" Java home:
+export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 
 export KRB5_CONFIG="$CLIENT_DIR/conf/krb5.conf"
 
