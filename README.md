@@ -1,9 +1,9 @@
 hathi-client
 ============
 
-This repository contains client software for the SURFsara Hadoop cluster Hathi.
-
-At the moment it contains Hadoop 2.6.0 and Pig 0.14.0.
+This repository contains client configuration for the SURFsara Hadoop cluster
+Hathi. At the moment it contains configuration for Hadoop 2.7.1 and Pig 0.15.0
+and Spark 1.6.0.
 
 Prerequisites
 -------------
@@ -25,15 +25,27 @@ for your specific JVM version. For Oracle Java 7 they can be found here:
 Usage
 -----
 
-`cd` to the top level directory and source the settings file for your platform:
+The first time you need to download the offical Hadoop/Pig/Spark software from
+Apache and put the SURFsara configuration in the right location. We provide a
+helper script that will do this automatically:
 
-    cd git/hathi-client && . conf/settings.linux
+    cd path/to/hathi-client
+    ./get.sh hadoop
+    ./get.sh pig
+    ./get.sh spark
+
+Whenever you want to use the cluster you need to perform the following once per
+session.
+
+1) `cd` to the top level directory and source the settings file:
+
+    cd path/to/hathi-client && . conf/settings
     cd -
 
 (You can add these lines to your `~/.profile` so that they are run
 automatically on login).
 
-Now you can authenticate using Kerberos:
+2) Now you can authenticate using Kerberos:
 
     kinit USERNAME
 
