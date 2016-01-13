@@ -1,1 +1,42 @@
-settings.linux
+export CLIENT_DIR="${PWD}"
+
+unamestr=$(uname)
+
+if [ ${unamestr} = "Darwin" ]; then
+  export JAVA_HOME="$(/usr/libexec/java_home)"
+elif [ ${unamestr} = "Linux" ]; then
+  candidates="/usr/lib/jvm/java-7-openjdk-amd64 /usr/lib/jvm/jre-1.7.0"
+  for i in $candidates; do
+    if [ -x "${i}/bin/java" ]; then
+        export JAVA_HOME="${i}"
+    	break
+    fi
+  done
+fi
+
+if [ -z ${JAVA_HOME} ]; then
+  echo "Could not set JAVA_HOME" >&2
+fi
+
+hadoop_version="2.7.1"
+pig_version="0.15.0"
+spark_version="1.6.0" 
+
+export KRB5_CONFIG="${CLIENT_DIR}/conf/krb5.conf"
+
+export HADOOP_HOME="${CLIENT_DIR}/hadoop-${hadoop_version}"
+export HADOOP_CONF="${HADOOP_HOME}/etc/hadoop"
+export HADOOP_CONF_DIR="${HADOOP_CONF}"
+
+export TEZ_CONF_DIR="${CLIENT_DIR}/conf/tez"
+export HADOOP_CLASSPATH="${TEZ_CONF_DIR}:${HADOOP_CLASSPATH}"
+
+export PIG_HOME="${CLIENT_DIR}/pig-${pig_version}"
+export PIG_HEAPSIZE=2048
+
+export SPARK_HOME=${CLIENT_DIR/spark-${spark_version}"
+
+export PATH="${HADOOP_HOME}/bin:${PIG_HOME}/bin:${SPARK_HOME}/bin:${PATH}"
+
+export HADOOP_CMD="${CLIENT_DIR}/hadoop-${hadoop_version}/bin/hadoop"
+export HADOOP_STREAMING="${CLIENT_DIR}/hadoop-${hadoop_version}/share/hadoop/tools/lib/hadoop-streaming-${hadoop_version}.jar"
