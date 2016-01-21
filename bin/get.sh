@@ -12,7 +12,7 @@ for arg in "$@"; do
       url=http://www.eu.apache.org/dist/pig/pig-0.15.0
       ;;
     spark)
-      pkg=spark-1.6.0
+      pkg=spark-1.6.0-bin-hadoop2.6
       url=http://www.eu.apache.org/dist/spark/spark-1.6.0
       ;;
     *)

@@ -34,7 +34,7 @@ export HADOOP_CLASSPATH="${TEZ_CONF_DIR}:${HADOOP_CLASSPATH}"
 export PIG_HOME="${CLIENT_DIR}/pig-${pig_version}"
 export PIG_HEAPSIZE=2048
 
-export SPARK_HOME=${CLIENT_DIR/spark-${spark_version}"
+export SPARK_HOME="${CLIENT_DIR}/spark-${spark_version}-bin-hadoop2.6"
 
 export PATH="${HADOOP_HOME}/bin:${PIG_HOME}/bin:${SPARK_HOME}/bin:${PATH}"
 
