@@ -29,10 +29,9 @@ The first time you need to download the official Hadoop/Pig/Spark software from
 Apache and put the SURFsara configuration in the right location. We provide a
 helper script that will do this automatically:
 
-    cd path/to/hathi-client
-    ./get.sh hadoop
-    ./get.sh pig
-    ./get.sh spark
+    /path/to/hathi-client/bin/get.sh hadoop
+    /path/to/hathi-client/bin/get.sh pig
+    /path/to/hathi-client/bin/get.sh spark
 
 Whenever you want to use the cluster you need to perform the following once per
 session.
