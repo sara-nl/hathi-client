@@ -25,7 +25,7 @@ for your specific JVM version. For Oracle Java 7 they can be found here:
 Usage
 -----
 
-The first time you need to download the offical Hadoop/Pig/Spark software from
+The first time you need to download the official Hadoop/Pig/Spark software from
 Apache and put the SURFsara configuration in the right location. We provide a
 helper script that will do this automatically:
 
@@ -37,22 +37,26 @@ helper script that will do this automatically:
 Whenever you want to use the cluster you need to perform the following once per
 session.
 
-1) `cd` to the top level directory and source the settings file:
+1) Setup the environment:
 
-    cd path/to/hathi-client && . conf/settings
-    cd -
+    eval $(/path/to/hathi-client/bin/env.sh)
 
-(You can add these lines to your `~/.profile` so that they are run
-automatically on login).
+(You can add this line to your `~/.profile` so that it is run automatically on
+login).
 
 2) Now you can authenticate using Kerberos:
 
     kinit USERNAME
 
-And use the hadoop and pig utilities:
+And use the Hadoop, Pig and Spark utilities:
 
     hdfs dfs -ls /
+
     yarn jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar pi 5 5
+
+    spark-submit --class org.apache.spark.examples.SparkPi \
+                 --master yarn  --deploy-mode cluster \
+                 $SPARK_HOME/lib/spark-examples*.jar 10
 
 Browser setup
 -------------
@@ -77,14 +81,16 @@ For Linux:
 
     sudo cp git/hathi-client/conf/krb5.conf /etc/
 
-The resource manager of the cluster can then be found at <http://head05.hathi.surfsara.nl>.
+The resource manager of the cluster can then be found at
+<http://head05.hathi.surfsara.nl>.
 
 The namenode of the cluster is located at <http://head02.hathi.surfsara.nl>.
 
 Support
 -------
 
-For more information about the SURFsara Hadoop cluster see <https://userinfo.surfsara.nl/systems/hadoop>.
+For more information about the SURFsara Hadoop cluster see
+<https://userinfo.surfsara.nl/systems/hadoop>.
 
 For any questions using Hadoop on the SURFsara cluster contact:
 [helpdesk@surfsara.nl](mailto:helpdesk@surfsara.nl?subject=Help with Hadoop hathi-client).
