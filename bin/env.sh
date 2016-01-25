@@ -18,6 +18,10 @@ if [ -z ${JAVA_HOME} ]; then
       	break
       fi
     done
+    if [ -z ${java_home} ]; then
+      java_bin="$(readlink -f $(which java))"
+      java_home="${java_bin%/bin/java}"
+    fi
   fi
   if [ -z ${java_home} ]; then
     echo "could not detect JAVA_HOME" >&2
