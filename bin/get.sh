@@ -26,8 +26,8 @@ fetch() {
 }
 
 get_hadoop() {
-  url=http://www.eu.apache.org/dist/hadoop/common/hadoop-2.7.1
-  pkg=hadoop-2.7.1
+  pkg=hadoop-"$hadoop_version"
+  url=http://www.eu.apache.org/dist/hadoop/common/"$pkg"
   tar="$pkg.tar.gz"
   fetch "$url" "$pkg" "$tar"
   echo "linking config for $pkg"
@@ -36,15 +36,15 @@ get_hadoop() {
 }
 
 get_pig() {
-  url=http://www.eu.apache.org/dist/pig/pig-0.15.0
-  pkg=pig-0.15.0
+  pkg=pig-"$pig_version"
+  url=http://www.eu.apache.org/dist/pig/"$pkg"
   tar="$pkg.tar.gz"
   fetch "$url" "$pkg" "$tar"
 }
 
 get_spark() {
-  url=http://www.eu.apache.org/dist/spark/spark-1.6.0
-  pkg=spark-1.6.0-bin-hadoop2.6
+  url=http://www.eu.apache.org/dist/spark/spark-"$spark_version"
+  pkg=spark-"$spark_version"-bin-hadoop2.6
   tar="$pkg.tgz"
   fetch "$url" "$pkg" "$tar"
   echo "linking config for $pkg"
@@ -59,6 +59,11 @@ usage() {
 }
 
 cd "$(dirname "$0")"/..
+. bin/versions
+
+if [[ $# -eq 0 ]] ; then
+  usage
+fi
 
 for arg in "$@"; do
   case $arg in
