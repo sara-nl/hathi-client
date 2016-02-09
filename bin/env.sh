@@ -1,9 +1,7 @@
-# Usage: eval $(hathi-client/bin/set-env.sh)
+# Usage: eval $(hathi-client/bin/env.sh)
 
 hathi_root="$(cd "`dirname "$0"`"/..; pwd)"
-hadoop_version="2.7.1"
-pig_version="0.15.0"
-spark_version="1.6.0" 
+. ${hathi_root}/bin/versions
 
 # Java
 if [ -z ${JAVA_HOME} ]; then
