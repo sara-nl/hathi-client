@@ -26,30 +26,39 @@ fetch() {
 }
 
 get_hadoop() {
-  url=http://www.eu.apache.org/dist/hadoop/common/hadoop-2.7.1
-  pkg=hadoop-2.7.1
+  version=2.7.1
+  url=http://www.eu.apache.org/dist/hadoop/common/hadoop-$version
+  pkg=hadoop-$version
   tar="$pkg.tar.gz"
   fetch "$url" "$pkg" "$tar"
   echo "linking config for $pkg"
   mv $pkg/etc/hadoop $pkg/etc/hadoop.default
   ln -s ../../conf/hadoop $pkg/etc/hadoop
+  rm -f hadoop >/dev/null
+  ln -s $pkg hadoop
 }
 
 get_pig() {
-  url=http://www.eu.apache.org/dist/pig/pig-0.15.0
-  pkg=pig-0.15.0
+  version=0.15.0
+  url=http://www.eu.apache.org/dist/pig/pig-$version
+  pkg=pig-$pig_version
   tar="$pkg.tar.gz"
   fetch "$url" "$pkg" "$tar"
+  rm -f pig >/dev/null
+  ln -s $pkg pig
 }
 
 get_spark() {
-  url=http://www.eu.apache.org/dist/spark/spark-1.6.0
-  pkg=spark-1.6.0-bin-hadoop2.6
+  version=1.6.0
+  url=http://www.eu.apache.org/dist/spark/spark-$version
+  pkg=spark-$version-bin-hadoop2.6
   tar="$pkg.tgz"
   fetch "$url" "$pkg" "$tar"
   echo "linking config for $pkg"
   mv $pkg/conf $pkg/conf.default
   ln -s ../conf/spark $pkg/conf
+  rm -f spark >/dev/null
+  ln -s $pkg spark
 }
 
 usage() {
