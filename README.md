@@ -12,10 +12,13 @@ This software is tested on Linux and OSX. On Linux you need to make sure that
 Java 7 and the Kerberos client libraries are installed. On OSX these should
 already be installed.
 
-Debian-based Linux (Debian, Ubuntu, Mint): `apt-get install openjdk-7-jdk
-krb5-user`
-Enterprise Linux (Redhat, CentOS, Fedora): `yum install java-1.7.0-openjdk
-krb5-workstation`
+Debian-based Linux (Debian, Ubuntu, Mint):
+
+    apt-get install openjdk-7-jre-headless krb5-user
+
+Enterprise Linux (Redhat, CentOS, Fedora):
+
+    yum install java-1.7.0-openjdk krb5-workstation
 
 Note that when using the Oracle JDK (e.g. OSX) you will need to install the
 Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files
@@ -67,10 +70,10 @@ the about:config (promise to be careful). Search for the key
 In addition, Firefox needs to be aware of the Kerberos setup. For this the
 Kerberos configuration `conf/krb5.conf` needs to be placed in the right
 location (you will need root access for this). Note that if you work with
-different Kerberos realms you can also add the kdc configuration (the [realms]
-section) from the hathi-client file to any existing Kerberos configuration
-file. To copy (and overwrite any existing files) the configuration to the
-correct location:
+different Kerberos realms you can also add the KDC configuration (the
+`[realms]` section) from the hathi-client file to any existing Kerberos
+configuration file. To copy (and overwrite any existing files) the
+configuration to the correct location:
 
 For OSX:
 
@@ -91,5 +94,5 @@ Support
 For more information about the SURFsara Hadoop cluster see
 <https://userinfo.surfsara.nl/systems/hadoop>.
 
-For any questions using Hadoop on the SURFsara cluster contact:
-[helpdesk@surfsara.nl](mailto:helpdesk@surfsara.nl?subject=Help with Hadoop hathi-client).
+For any questions using Hadoop at SURFsara contact the [SURFsara
+helpdesk](mailto:helpdesk@surfsara.nl?subject=Help with Hadoop hathi-client).
