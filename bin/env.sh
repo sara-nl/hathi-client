@@ -1,4 +1,6 @@
-# Usage: eval $(hathi-client/bin/set-env.sh)
+#!/bin/sh
+# script to set environment
+# usage: eval $(hathi-client/bin/env.sh)
 
 hathi_root="$(cd "`dirname "$0"`"/..; pwd)"
 

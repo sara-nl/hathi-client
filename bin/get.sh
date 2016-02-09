@@ -1,4 +1,6 @@
 #!/bin/sh
+# script to download upstream client packages
+# usage: hathi-client/bin/get.sh [hadoop|pig|spark]
 
 fetch() {
   echo "fetching $pkg"
@@ -15,9 +17,9 @@ fetch() {
   if [ -e $tar ]; then
     echo "$tar already exists, please remove manually if you wish to redownload"
     echo "using existing tarball..."
-  else 
+  else
     echo "downloading $pgk"
-    wget -nv  --show-progress "$url/$tar"
+    wget -nv "$url/$tar"
   fi
 
   echo "extracting $pkg"
