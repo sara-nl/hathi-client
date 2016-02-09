@@ -1,0 +1,3 @@
+echo "hathi-client/conf/settings.osx is deprecated, use hathi-client/bin/env.sh."
+echo "See hathi-client/README.md for instructions."
+eval $(bin/env.sh)
