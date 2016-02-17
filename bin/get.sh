@@ -43,7 +43,7 @@ get_hadoop() {
 get_pig() {
   version=0.15.0
   url=http://www.eu.apache.org/dist/pig/pig-$version
-  pkg=pig-$pig_version
+  pkg=pig-$version
   tar="$pkg.tar.gz"
   fetch "$url" "$pkg" "$tar"
   rm -f pig >/dev/null
