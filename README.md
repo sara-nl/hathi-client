@@ -9,16 +9,16 @@ Prerequisites
 -------------
 
 This software is tested on Linux and OSX. On Linux you need to make sure that
-Java 7 and the Kerberos client libraries are installed. On OSX these should
-already be installed.
+Git, Java 7 and the Kerberos client libraries are installed. On OSX these
+should already be installed.
 
 Debian-based Linux (Debian, Ubuntu, Mint):
 
-    apt-get install openjdk-7-jre-headless krb5-user
+    apt-get install git openjdk-7-jre-headless krb5-user
 
 Enterprise Linux (Redhat, CentOS, Fedora):
 
-    yum install java-1.7.0-openjdk krb5-workstation
+    yum install git java-1.7.0-openjdk krb5-workstation
 
 Note that when using the Oracle JDK (e.g. OSX) you will need to install the
 Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files
@@ -32,6 +32,7 @@ The first time you need to download the official Hadoop/Pig/Spark software from
 Apache and put the SURFsara configuration in the right location. We provide a
 helper script that will do this automatically:
 
+    git clone --depth 1 https://github.com/sara-nl/hathi-client
     /path/to/hathi-client/bin/get.sh hadoop
     /path/to/hathi-client/bin/get.sh pig
     /path/to/hathi-client/bin/get.sh spark
