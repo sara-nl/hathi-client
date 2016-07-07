@@ -2,8 +2,8 @@ hathi-client
 ============
 
 This repository contains client configuration for the SURFsara Hadoop cluster
-Hathi. At the moment it contains configuration for Hadoop 2.7.1 and Pig 0.15.0
-and Spark 1.6.0.
+Hathi. At the moment it contains configuration for Hadoop 2.7.1 and Pig 0.16.0
+and Spark 1.6.1.
 
 Prerequisites
 -------------
