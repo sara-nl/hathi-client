@@ -13,7 +13,7 @@
   </property>
     <property>
     <name>dfs.namenode.rpc-address.hathi-surfsara.nn2</name>
-    <value>head10.hathi.surfsara.nl:8020</value>
+    <value>nn2.hathi.surfsara.nl:8020</value>
   </property>
     <property>
     <name>dfs.namenode.http-address.hathi-surfsara.nn1</name>
@@ -21,7 +21,7 @@
   </property>
     <property>
     <name>dfs.namenode.http-address.hathi-surfsara.nn2</name>
-    <value>head10.hathi.surfsara.nl:50070</value>
+    <value>nn2.hathi.surfsara.nl:50070</value>
   </property>
     <property>
     <name>dfs.client.failover.proxy.provider.hathi-surfsara</name>
