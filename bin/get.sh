@@ -51,9 +51,9 @@ get_pig() {
 }
 
 get_spark() {
-  version=1.6.1
+  version=2.0.0
   url=http://www.eu.apache.org/dist/spark/spark-$version
-  pkg=spark-$version-bin-hadoop2.6
+  pkg=spark-$version-bin-without-hadoop
   tar="$pkg.tgz"
   fetch "$url" "$pkg" "$tar"
   echo "linking config for $pkg"
