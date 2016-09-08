@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # Kerberos configuration
-export YARN_OPTS="-Djava.security.krb5.conf=$KRB5_CONFIG -Djava.security.krb5.realm=CUA.SURFSARA.NL -Djava.security.krb5.kdc=kdc.hathi.surfsara.nl -Djava.net.preferIPv4Stack=true $YARN_OPTS"
+export YARN_OPTS="-Djava.security.krb5.conf=$KRB5_CONFIG -Djava.security.krb5.realm=CUA.SURFSARA.NL -Djava.security.krb5.kdc=kerberos1.osd.surfsara.nl -Djava.net.preferIPv4Stack=true $YARN_OPTS"
 
 # User for YARN daemons
 export HADOOP_YARN_USER=${HADOOP_YARN_USER:-yarn}
