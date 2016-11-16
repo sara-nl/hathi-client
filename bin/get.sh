@@ -51,7 +51,7 @@ get_pig() {
 }
 
 get_spark() {
-  version=1.6.1
+  version=1.6.3
   url=http://www.eu.apache.org/dist/spark/spark-$version
   pkg=spark-$version-bin-hadoop2.6
   tar="$pkg.tgz"
