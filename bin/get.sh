@@ -28,7 +28,7 @@ fetch() {
 }
 
 get_hadoop() {
-  version=2.7.1
+  version=2.7.2
   url=http://www.eu.apache.org/dist/hadoop/common/hadoop-$version
   pkg=hadoop-$version
   tar="$pkg.tar.gz"
@@ -51,7 +51,7 @@ get_pig() {
 }
 
 get_spark() {
-  version=2.0.2
+  version=2.1.0
   url=http://www.eu.apache.org/dist/spark/spark-$version
   pkg=spark-$version-bin-without-hadoop
   tar="$pkg.tgz"
