@@ -22,8 +22,13 @@ Enterprise Linux (Redhat, CentOS, Fedora):
 
 Note that when using the Oracle JDK (e.g. OSX) you will need to install the
 Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files
-for your specific JVM version. For Oracle Java 7 they can be found here:
+for your specific JVM version.
+
+For Oracle Java 7 they can be found here:
 <http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html>
+
+For Oracle Java 8:
+<http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html>
 
 Usage
 -----
