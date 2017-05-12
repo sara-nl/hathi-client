@@ -28,7 +28,7 @@ fetch() {
 }
 
 get_hadoop() {
-  version=2.7.1
+  version=2.7.2
   url=http://www.eu.apache.org/dist/hadoop/common/hadoop-$version
   pkg=hadoop-$version
   tar="$pkg.tar.gz"
@@ -51,9 +51,9 @@ get_pig() {
 }
 
 get_spark() {
-  version=1.6.3
+  version=2.1.1
   url=http://www.eu.apache.org/dist/spark/spark-$version
-  pkg=spark-$version-bin-hadoop2.6
+  pkg=spark-$version-bin-without-hadoop
   tar="$pkg.tgz"
   fetch "$url" "$pkg" "$tar"
   echo "linking config for $pkg"
