@@ -44,6 +44,7 @@ helper script that will do this automatically:
 > /path/to/hathi-client/bin/get.sh hadoop
 > /path/to/hathi-client/bin/get.sh pig
 > /path/to/hathi-client/bin/get.sh spark
+```
 
 Whenever you want to use the cluster you need to perform the following once per
 session.
