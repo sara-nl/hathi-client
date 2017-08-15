@@ -106,4 +106,4 @@ For more information about the SURFsara Hadoop cluster see
 <https://userinfo.surfsara.nl/systems/hadoop>.
 
 For any questions using Hadoop at SURFsara contact the [SURFsara
-helpdesk](mailto:helpdesk@surfsara.nl?subject=Help with Hadoop hathi-client).
+helpdesk](mailto:helpdesk@surfsara.nl?subject=Help%20with%20Hadoop%20hathi-client).
