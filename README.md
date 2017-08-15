@@ -2,15 +2,14 @@ hathi-client
 ============
 
 This repository contains client configuration for the SURFsara Hadoop cluster
-Hathi. At the moment it contains configuration for Hadoop 2.7.1 and Pig 0.16.0
+Hathi. At the moment it contains configuration for Hadoop 2.7.2, Pig 0.16.0
 and Spark 2.1.1.
 
 Prerequisites
 -------------
-
 This software is tested on Linux and OSX. On Linux you need to make sure that
-Git, Java 7 and the Kerberos client libraries are installed. On OSX these
-should already be installed.
+Git, Java 7 and the Kerberos client libraries are installed. **On OSX these
+should already be installed.**
 
 Debian-based Linux (Debian, Ubuntu, Mint):
 
@@ -30,6 +29,9 @@ For Oracle Java 7 they can be found here:
 For Oracle Java 8:
 <http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html>
 
+If using a JDK, please make sure to install the extension's .jar files inside the
+`$JAVA_HOME/jre/lib` directory rather than the JDK's lib directory `$JAVA_HOME/lib`.
+
 Usage
 -----
 
@@ -37,35 +39,37 @@ The first time you need to download the official Hadoop/Pig/Spark software from
 Apache and put the SURFsara configuration in the right location. We provide a
 helper script that will do this automatically:
 
-    git clone --depth 1 https://github.com/sara-nl/hathi-client
-    /path/to/hathi-client/bin/get.sh hadoop
-    /path/to/hathi-client/bin/get.sh pig
-    /path/to/hathi-client/bin/get.sh spark
+```
+> git clone --depth 1 https://github.com/sara-nl/hathi-client
+> /path/to/hathi-client/bin/get.sh hadoop
+> /path/to/hathi-client/bin/get.sh pig
+> /path/to/hathi-client/bin/get.sh spark
 
 Whenever you want to use the cluster you need to perform the following once per
 session.
 
 1) Setup the environment:
-
-    eval $(/path/to/hathi-client/bin/env.sh)
-
+```
+> eval $(/path/to/hathi-client/bin/env.sh)
+```
 (You can add this line to your `~/.profile` so that it is run automatically on
 login).
 
 2) Now you can authenticate using Kerberos:
-
-    kinit USERNAME
+```
+> kinit <USERNAME>
+```
 
 And use the Hadoop, Pig and Spark utilities:
+```
+> hdfs dfs -ls /
 
-    hdfs dfs -ls /
+> yarn jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar pi 5 5
 
-    yarn jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar pi 5 5
-
-    spark-submit --class org.apache.spark.examples.SparkPi \
+> spark-submit --class org.apache.spark.examples.SparkPi \
                  --master yarn  --deploy-mode cluster \
                  $SPARK_HOME/lib/spark-examples*.jar 10
-
+```
 Browser setup
 -------------
 
