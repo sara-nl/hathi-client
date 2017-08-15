@@ -13,11 +13,11 @@ should already be installed.**
 
 Debian-based Linux (Debian, Ubuntu, Mint):
 
-    apt-get install git openjdk-7-jre-headless krb5-user
+    > apt-get install git openjdk-7-jre-headless krb5-user
 
 Enterprise Linux (Redhat, CentOS, Fedora):
 
-    yum install git java-1.7.0-openjdk krb5-workstation
+    > yum install git java-1.7.0-openjdk krb5-workstation
 
 Note that when using the Oracle JDK (e.g. OSX) you will need to install the
 Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files
