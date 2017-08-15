@@ -88,11 +88,11 @@ configuration to the correct location:
 
 For OSX:
 
-    cp git/hathi-client/conf/krb5.conf $HOME/Library/Preferences/edu.mit.Kerberos
-	
+    > cp git/hathi-client/conf/krb5.conf $HOME/Library/Preferences/edu.mit.Kerberos
+
 For Linux:
 
-    sudo cp git/hathi-client/conf/krb5.conf /etc/
+    > sudo cp git/hathi-client/conf/krb5.conf /etc/
 
 The resource manager of the cluster can then be found at
 <http://head05.hathi.surfsara.nl>.
