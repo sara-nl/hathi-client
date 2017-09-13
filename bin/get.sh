@@ -43,7 +43,7 @@ fetch() {
 
 get_hadoop() {
   version=2.7.2
-  url=http://www.eu.apache.org/dist/hadoop/common/hadoop-$version
+  url=https://archive.apache.org/dist/hadoop/common/hadoop-$version
   pkg=hadoop-$version
   tar="$pkg.tar.gz"
   fetch "$url" "$pkg" "$tar"
