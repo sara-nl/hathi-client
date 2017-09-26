@@ -69,7 +69,7 @@ And use the Hadoop, Pig and Spark utilities:
 
 > spark-submit --class org.apache.spark.examples.SparkPi \
                  --master yarn  --deploy-mode cluster \
-                 $SPARK_HOME/lib/spark-examples*.jar 10
+                 $SPARK_HOME/examples/jars/spark-examples_2.11-2.1.1.jar 10
 ```
 Browser setup
 -------------
