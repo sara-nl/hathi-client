@@ -65,7 +65,7 @@ get_pig() {
 }
 
 get_spark() {
-  version=2.1.1
+  version=2.1.2
   url=http://archive.apache.org/dist/spark/spark-$version
   pkg=spark-$version-bin-without-hadoop
   tar="$pkg.tgz"
