@@ -1,4 +1,4 @@
-FROM java:7
+FROM openjdk:7-jre
 COPY . /hathi-client
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -yq krb5-user \
