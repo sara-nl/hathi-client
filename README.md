@@ -1,5 +1,6 @@
 hathi-client
 ============
+**Deprecation notice: the SURFsara Hadoop cluster Hathi has been decommissioned. This repository is archived, but will remain available for reference purposes.**
 
 This repository contains client configuration for the SURFsara Hadoop cluster
 Hathi. At the moment it contains configuration for Hadoop 2.7.2, Pig 0.16.0
